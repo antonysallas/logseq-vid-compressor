@@ -117,3 +117,21 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+
+# Backup files
+*.bak
+*.backup
+*.bk
+
+# Archive files
+*.zip
+*.rar
+*.tar
+*.gz
+*.7z
+
+# Github
+.github
+
+# Log files
+*.log

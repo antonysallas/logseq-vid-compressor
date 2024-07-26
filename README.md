@@ -1,2 +1,3 @@
-# logseq-plugin-starter-template
-A quick and easy to use template to get you going from the get go
+# logseq-vid-compressor
+
+Compress the videos pasted in Logseq to save space

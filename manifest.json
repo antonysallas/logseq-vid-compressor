@@ -1,0 +1,8 @@
+{
+	"id": "logseq-vid-compressor",
+	"name": "Video Compressor",
+	"description": "Compresses video files when added to Logseq",
+	"version": "1.0.0",
+	"author": "Antony Sallas",
+	"main": "dist/main.js"
+}
