@@ -2,35 +2,43 @@
 	"name": "logseq-vid-compressor",
 	"version": "1.0.0",
 	"description": "A Logseq Plugin to compress videos while adding to the graph.",
-	"main": "dist/main.js",
+	"main": "dist/index.html",
+	"type": "module",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
 		"dev": "vite",
-		"build": "vite build",
+		"build": "tsc && vite build",
 		"serve": "vite preview"
 	},
 	"keywords": [],
 	"author": "Antony Sallas <61572720+antonysallas@users.noreply.github.com>",
 	"license": "ISC",
 	"dependencies": {
-		"@ffmpeg/core": "^0.11.0",
-		"@ffmpeg/ffmpeg": "^0.11.5",
-		"@logseq/libs": "^0.0.17",
+		"@logseq/libs": "^0.0.17"
+	},
+	"devDependencies": {
+		"@babel/core": "^7.24.9",
+		"@babel/preset-env": "^7.24.8",
+		"@ffmpeg/core": "^0.12.6",
+		"@ffmpeg/ffmpeg": "^0.12.10",
+		"@ffmpeg/util": "^0.12.1",
+		"@vitejs/plugin-vue": "^5.1.0",
+		"babel-loader": "^9.1.3",
 		"browserify-fs": "^1.0.0",
 		"buffer": "^6.0.3",
 		"os-browserify": "^0.3.0",
 		"stream-browserify": "^3.0.0",
-		"vite": "^5.2.11"
-	},
-	"devDependencies": {
-		"@babel/core": "^7.24.5",
-		"@babel/preset-env": "^7.24.5",
-		"babel-loader": "^9.1.3"
+		"typescript": "^5.5.4",
+		"vite": "^5.3.5",
+		"vite-plugin-copy": "^0.1.6",
+		"vite-plugin-html": "^3.2.2",
+		"vite-plugin-static-copy": "^1.0.6"
 	},
 	"logseq": {
 		"title": "Video Compressor",
 		"icon": "./icon.png",
 		"id": "logseq-vid-compressor"
 	},
-	"repository": "git@github.com:antonysallas/logseq-vid-compressor.git"
+	"repository": "git@github.com:antonysallas/logseq-vid-compressor.git",
+	"effect": true
 }

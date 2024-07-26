@@ -1,0 +1,10 @@
+@import url("./settingsForms.css");
+
+.panel-wrap[data-id="logseq-vid-compressor"] .desc-item {
+    margin: 0 12px 0 32px;
+}
+
+.cp__settings-inner > aside ul > li.active,
+.cp__settings-inner > aside ul > li:hover {
+    background-color: var(--ls-primary-background-color);
+}

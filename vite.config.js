@@ -1,4 +1,5 @@
 import { defineConfig } from "vite";
+import { viteStaticCopy } from "vite-plugin-static-copy";
 
 export default defineConfig({
 	resolve: {
@@ -10,11 +11,14 @@ export default defineConfig({
 		},
 	},
 	build: {
+		outDir: "dist",
 		sourcemap: true,
 		target: "esnext",
 		minify: "esbuild",
 		rollupOptions: {
+			input: "src/index.js", // Assuming you're using TypeScript
 			output: {
+				format: "es",
 				entryFileNames: "assets/[name].[hash].js",
 				chunkFileNames: "assets/chunks/[name].[hash].js",
 				assetFileNames: "assets/[name].[hash].[ext]",
@@ -29,4 +33,12 @@ export default defineConfig({
 	optimizeDeps: {
 		include: ["@ffmpeg/ffmpeg"],
 	},
+	plugins: [
+		viteStaticCopy({
+			targets: [
+				{ src: "package.json", dest: "." },
+				{ src: "icon.png", dest: "." },
+			],
+		}),
+	],
 });

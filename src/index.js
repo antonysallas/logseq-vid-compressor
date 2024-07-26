@@ -1,10 +1,13 @@
 import "@logseq/libs";
 import { compressVideo } from "./compress.js";
+import { settingsLoad } from "./plugin/settings.ts";
 
 const supportedVideoExtensions = [".mov", ".mp4", ".avi", ".mkv", ".flv", ".wmv", ".m4v"];
 
 const main = async () => {
 	console.log("logseq-video-compressor plugin loaded");
+
+	settingsLoad();
 
 	logseq.App.onFileAdded(async ({ path }) => {
 		console.log(`File added event received: ${path}`);
